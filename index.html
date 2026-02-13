@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script/script.js" defer></script>
+    <link rel="stylesheet" href="CSS/style.css">
+    <title>Aylin Valentines ❤️</title>
+</head>
+<body>
+
+    
+
+    <section id="content-container">
+        <div class="content">
+            <h1>Happy valentines Aylin <span>❤️</span></h1>
+
+            <div class="present-container">
+                <div class="present" id="p1">
+                    <img class="p-closed1" src="images/present-closed-bg-removebg-preview.png" alt="present">
+                    <img class="p-opening1" src="images/present-open-bg-removebg-preview.png" alt="present">
+                    <img class="p-opened1" src="images/present-open-full-removebg-preview.png" alt="present">
+                </div>
+                
+                <div class="present" id="p2">
+                    <img class="p-closed2" src="images/present-closed-bg-removebg-preview.png" alt="present">
+                    <img class="p-opening2" src="images/present-open-bg-removebg-preview.png" alt="present">
+                    <img class="p-opened2" src="images/present-open-full-removebg-preview.png" alt="present">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="present1-message">
+        <div class="present-question">
+            <h2>Uh oh! Looks like this present is locked...</h2>
+            <h3>Click on the heart to unlock it</h3>
+        </div>
+
+        <div class="task1">
+            <button id="b1-C" onclick="q1Correct()">❤️</button>
+        </div>
+    </section>
+
+    <section id="present2-message">
+        <div class="present-question">
+            <h2>Uh oh! Looks like this present is locked...</h2>
+            <h3>Answer the following question to unlock it</h3>
+        </div>
+
+        <div class="question1">
+            <span>What date did we unofficially become serious?</span>
+            <div class="buttons">
+                <button id="b2-W1" onclick="q2Wrong1()">Feb 19 2025</button>
+                <button id="b2-W2" onclick="q2Wrong2()">Mar 15 2025</button>
+                <button class="b2-C" onclick="q2Correct()">Apr 5 2025</button>
+                <button id="b2-W3" onclick="q2Wrong3()">Feb 27 2025</button>
+            </div>
+        </div>
+    </section>
+        
+
+    <section id="correct-answer-message">
+        <h2>Good job!</h2>
+        <h3>Hopefully you don't feel like breaking up with me after that...</h3>
+        <div class="gift-container1">
+            <img class="closed-gift" src="images/present-closed-bg-removebg-preview.png" alt="closed gift">
+            <img class="opened-gift" src="images/present-open-full-removebg-preview.png" alt="opened gift">
+        </div>
+    </section>
+
+     <section id="correct-answer-money">
+        <h2>Correct!</h2>
+        <h3>Answer may differ between who answers. But April 5th 2025 was the day you said we would see in Sweden and I asked if you were for real. Ever since I've given my all to this relationship</h3>
+        <div class="gift-container2">
+            <img class="closed-gift" src="images/present-closed-bg-removebg-preview.png" alt="closed gift">
+            <img class="opened-gift" src="images/present-open-full-removebg-preview.png" alt="opened gift">
+        </div>
+    </section>
+
+    <section id="wrong-answer">
+        <img src="images/redX.png" alt="INCORRECT">
+    </section>
+
+
+    <section id="gift-message">
+        <div class="return-message">
+            <button class="button-back" onclick="returnHomeMessage()">Return</button>
+        </div>
+        <h2>Happy valentines Aylin <span>❤️</span></h2>
+
+        <div class="text-container">
+            
+            <div class="audio-container">
+                <audio controls>
+                    <source src="audios/Aylin_lovepoem.mp3" type="audio/mpeg">
+                </audio>
+                <span>← Me reading it</span>
+            </div>
+<br>
+            <span class="love-poem">To Aylin<br><br>
+
+To Aylin, the love of my life,<br>
+The love that once felt so out of sight,<br>
+The love that was already so near<br>
+Cause my other half was right here<br>
+<br>
+To the love that feels so swimmingly easy<br>
+The love that makes me feel so cheesy<br>
+The one who holds me together when I fall<br>
+When nothing makes sense at all<br>
+<br>
+Through rough and fun, through wrong and right<br>
+You are always there, my light<br>
+My other half, my favorite part of me<br>
+The missing part that was always meant to be<br>
+<br>
+From raging in Roblox chats<br>
+To grinding Overwatch stats<br>
+From two hearts in love today<br>
+To husband and wife someday<br>
+<br>
+One day I will make you mine<br>
+And promise to keep you until the end of time<br>
+To the most perfect person I know<br>
+I love you more than I'll ever be able to show</span>
+        </div>
+    </section>
+
+    <section id="gift-money">
+        <div class="return-money">
+            <button class="button-back" onclick="returnHomeMoney()">Return</button>
+        </div>
+        <h2>Happy valentines Aylin <span>❤️</span></h2>
+
+        <div class="image-grid">
+            <img src="images/hellokitty-removebg-preview.png" alt="REWARD">
+            <img src="images/megabundlefull.png" alt="REWARD">
+            <img src="images/OW2_Juno.png" alt="REWARD">
+            </div>
+    </section>
+    
+
+</body>
+</html>
