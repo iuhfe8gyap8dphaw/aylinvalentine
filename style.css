@@ -1,0 +1,416 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+html, body {
+  height: 100vh;
+  width: 100vw;
+  background-color: #6902A6;
+}
+
+#content-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+#content-container .content {
+  width: 80%;
+  height: 100%;
+  background-color: #FFA6F9;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+}
+#content-container .content h1 {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: #BB04C7;
+  text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
+  font-size: 4rem;
+  font-style: italic;
+}
+#content-container .content h1 span {
+  text-shadow: none;
+  font-style: italic;
+}
+#content-container .content .present-container {
+  display: flex;
+  gap: 10rem;
+  height: 50%;
+  align-items: center;
+}
+#content-container .content .present-container .present {
+  position: relative;
+}
+#content-container .content .present-container .present img {
+  width: 180px;
+  height: 200px;
+}
+#content-container .content .present-container .present .p-closed1, #content-container .content .present-container .present .p-closed2 {
+  display: block;
+}
+#content-container .content .present-container .present .p-opening1, #content-container .content .present-container .present .p-opening2, #content-container .content .present-container .present .p-opened1, #content-container .content .present-container .present .p-opened2 {
+  display: none;
+}
+#content-container .content .present-container .present:hover {
+  cursor: pointer;
+}
+#content-container .content .present-container .present:hover:first-child .p-closed1 {
+  display: none;
+}
+#content-container .content .present-container .present:hover:first-child .p-opening1 {
+  display: block;
+  height: 250px;
+  width: 180px;
+}
+#content-container .content .present-container .present:hover:first-child .p-opening2 {
+  height: 200px;
+  width: 180px;
+}
+#content-container .content .present-container .present:hover:last-child .p-closed2 {
+  display: none;
+}
+#content-container .content .present-container .present:hover:last-child .p-opening2 {
+  display: block;
+  height: 250px;
+  width: 180px;
+}
+
+#present1-message {
+  position: absolute;
+  z-index: 11;
+  height: 80vh;
+  width: 80vw;
+  background-color: #FFA6F9;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+}
+#present1-message h2 {
+  font-size: 2rem;
+  color: #BB04C7;
+  text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
+}
+#present1-message h3 {
+  font-size: 1.5rem;
+  text-align: center;
+  color: #BB04C7;
+  text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
+}
+#present1-message .task1 {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  font-size: 2rem;
+  color: pink;
+  text-shadow: -1px -1px 0 purple, 1px -1px 0 purple, -1px 1px 0 purple, 1px 1px 0 purple;
+  background-color: lightblue;
+  height: 100%;
+  width: 100%;
+  border: #BB04C7 solid 3px;
+  border-radius: 0.55rem;
+  position: relative;
+}
+#present1-message .task1 #b1-C {
+  color: purple;
+  outline: none;
+  border-radius: 0.25rem;
+  border: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background-color: transparent;
+  font-size: 1rem;
+}
+#present1-message .task1 #b1-C:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+#present2-message {
+  position: absolute;
+  z-index: 11;
+  height: 80vh;
+  width: 80vw;
+  background-color: #FFA6F9;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: center;
+}
+#present2-message h2 {
+  font-size: 2rem;
+  color: #BB04C7;
+  text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
+}
+#present2-message h3 {
+  font-size: 1.5rem;
+  text-align: center;
+  color: #BB04C7;
+  text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
+}
+#present2-message .question1 {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  font-size: 2rem;
+  color: #BB04C7;
+  text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
+}
+#present2-message .question1 .buttons {
+  display: flex;
+  gap: 2rem;
+}
+#present2-message .question1 .buttons button {
+  color: #BB04C7;
+  background-color: white;
+  border-radius: 0.55rem;
+  border: solid #BB04C7 3px;
+  outline: none;
+  height: 100%;
+  width: 50%;
+  font-size: 1rem;
+}
+#present2-message .question1 .buttons button:hover {
+  transition-duration: 0.4s;
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+#correct-answer-message {
+  z-index: 100;
+  background-color: #FFA6F9;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80%;
+  width: 80%;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+#correct-answer-message h2 {
+  font-size: 2rem;
+  color: #BB04C7;
+  text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
+}
+#correct-answer-message h3 {
+  font-size: 1.5rem;
+  margin-bottom: 6rem;
+  color: #BB04C7;
+  text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
+}
+#correct-answer-message .gift-container1 img {
+  height: 200px;
+  width: 180px;
+}
+#correct-answer-message .gift-container1 .closed-gift {
+  display: block;
+}
+#correct-answer-message .gift-container1 .opened-gift {
+  display: none;
+}
+#correct-answer-message .gift-container1:hover {
+  cursor: pointer;
+}
+#correct-answer-message .gift-container1:hover .closed-gift {
+  display: none;
+}
+#correct-answer-message .gift-container1:hover .opened-gift {
+  display: block;
+}
+
+#correct-answer-money {
+  z-index: 100;
+  background-color: #FFA6F9;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80%;
+  width: 80%;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+#correct-answer-money h2 {
+  font-size: 2rem;
+  color: #BB04C7;
+  text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
+}
+#correct-answer-money h3 {
+  margin-bottom: 6rem;
+  color: #BB04C7;
+  text-align: center;
+  font-size: 1.5rem;
+  text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
+}
+#correct-answer-money .gift-container2 img {
+  height: 200px;
+  width: 180px;
+}
+#correct-answer-money .gift-container2 .closed-gift {
+  display: block;
+}
+#correct-answer-money .gift-container2 .opened-gift {
+  display: none;
+}
+#correct-answer-money .gift-container2:hover {
+  cursor: pointer;
+}
+#correct-answer-money .gift-container2:hover .closed-gift {
+  display: none;
+}
+#correct-answer-money .gift-container2:hover .opened-gift {
+  display: block;
+}
+
+#wrong-answer {
+  z-index: 101;
+  background-color: transparent;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80%;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: none;
+}
+
+#gift-message {
+  display: none;
+  align-items: center;
+  height: 100%;
+  flex-direction: column;
+  width: 80%;
+  background-color: #FFA6F9;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#gift-message .return-message {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem 0rem 0rem 1rem;
+  width: 100%;
+}
+#gift-message .return-message button {
+  width: 10%;
+  padding: 0.5rem 1rem;
+  background-color: white;
+  justify-content: start;
+  border: #BB04C7 solid 3px;
+  border-radius: 0.55rem;
+  color: #BB04C7;
+}
+#gift-message .return-message button:hover {
+  opacity: 0.75;
+  cursor: pointer;
+}
+#gift-message h2 {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: #BB04C7;
+  text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
+  font-size: 4rem;
+  font-style: italic;
+}
+#gift-message h2 span {
+  text-shadow: none;
+  font-style: italic;
+}
+#gift-message .text-container {
+  background-color: white;
+  border-radius: 0.55rem;
+  border: #BB04C7 solid 3px;
+  padding: 0rem 5rem 5rem 5rem;
+  max-height: 60%;
+  white-space: nowrap;
+  overflow: auto;
+  margin-top: 2rem;
+}
+#gift-message .text-container .audio-container {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  border-bottom: solid 3px #BB04C7;
+  padding: 1rem 0rem;
+}
+#gift-message .text-container .love-poem {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: #BB04C7;
+  font-style: italic;
+  font-size: 1.5rem;
+}
+
+#gift-money {
+  display: none;
+  align-items: center;
+  height: 100%;
+  flex-direction: column;
+  width: 80%;
+  background-color: #FFA6F9;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#gift-money .return-money {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem 0rem 0rem 1rem;
+  width: 100%;
+}
+#gift-money .return-money button {
+  width: 10%;
+  padding: 0.5rem 1rem;
+  background-color: white;
+  justify-content: start;
+  border: #BB04C7 solid 3px;
+  border-radius: 0.55rem;
+  color: #BB04C7;
+}
+#gift-money .return-money button:hover {
+  opacity: 0.75;
+  cursor: pointer;
+}
+#gift-money h2 {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: #BB04C7;
+  text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
+  font-size: 4rem;
+  font-style: italic;
+}
+#gift-money h2 span {
+  text-shadow: none;
+  font-style: italic;
+}
+#gift-money .image-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+#gift-money .image-grid img {
+  height: 350px;
+  width: 250px;
+}/*# sourceMappingURL=style.css.map */
